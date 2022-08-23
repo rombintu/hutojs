@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
-	"log"
 	"os/exec"
 	"strings"
 )
@@ -62,6 +62,6 @@ func ExecCommand(command string, params ...string) (*bytes.Reader, error) {
 	// if err != nil {
 	// 	return &bytes.Reader{}, err
 	// }
-	log.Printf("%s\n", out)
+	fmt.Printf("%s\n", out)
 	return bytes.NewReader(out), err
 }
