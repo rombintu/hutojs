@@ -5,6 +5,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"io"
+	"log"
 	"os/exec"
 	"strings"
 )
@@ -61,6 +62,6 @@ func ExecCommand(command string, params ...string) (*bytes.Reader, error) {
 	if err != nil {
 		return &bytes.Reader{}, err
 	}
-
+	log.Printf("%s\n", out)
 	return bytes.NewReader(out), nil
 }
