@@ -62,6 +62,6 @@ func ExecCommand(command string, params ...string) (*bytes.Reader, error) {
 	// if err != nil {
 	// 	return &bytes.Reader{}, err
 	// }
-	fmt.Printf("%s\n", out)
+	fmt.Printf("Вывод: \n%s\n", out)
 	return bytes.NewReader(out), err
 }
