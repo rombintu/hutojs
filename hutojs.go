@@ -59,9 +59,9 @@ func trimArr(s []string) []string {
 func ExecCommand(command string, params ...string) (*bytes.Reader, error) {
 	cmd := exec.Command(command, params...)
 	out, err := cmd.Output()
-	if err != nil {
-		return &bytes.Reader{}, err
-	}
+	// if err != nil {
+	// 	return &bytes.Reader{}, err
+	// }
 	log.Printf("%s\n", out)
-	return bytes.NewReader(out), nil
+	return bytes.NewReader(out), err
 }
